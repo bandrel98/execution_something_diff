@@ -1,0 +1,42 @@
+[
+  {
+    "id" : 1,
+    "course" : "JavaWeb后端开发",
+    "teacher": "宏哥、文丑",
+    "hour": 120,
+    "study": 66,
+    "curr" : "JavaWeb篇-第05讲-XXX-XXX-XXX"
+  },
+  {
+    "id" : 2,
+    "course" : "大数据实战技术",
+    "teacher":  "玄武、文丑、宏哥",
+    "hour": 120,
+    "study": 33,
+    "curr" : "Hadoop篇-第02讲-XXX-XXX-XXX"
+  },
+  {
+    "id" : 3,
+    "course" : "领袖哲学",
+    "teacher":  "晖哥",
+    "hour": 30,
+    "study": 18,
+    "curr" : "第03讲-波特五力"
+  },
+  {
+    "id" : 4,
+    "course" : "大数据实战思维",
+    "teacher":  "晖哥、宏哥",
+    "hour": 10,
+    "study": 10,
+    "curr" : null
+  },
+  {
+    "id" : 5,
+    "course" : "产品运营思维",
+    "teacher":  "晖哥、宏哥",
+    "hour": 10,
+    "study": 10,
+    "curr" : null
+  }
+]

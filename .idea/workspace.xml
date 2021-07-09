@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="LS04:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="551db9fd-f057-4621-8146-102bc0283423" name="Default Changelist" comment="登录">
+      <change beforePath="$PROJECT_DIR$/src/edu/mama/ls04/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/mama/ls04/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/mama/ls04/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/mama/ls04/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1rZxRHWBZWh84OjW9CWN4betWX5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\JavaWeb\LS04\web" />
+      <recent name="D:\Project\JavaWeb\LS04\web\static" />
+      <recent name="D:\Project\JavaWeb\LS04\web\user" />
+      <recent name="D:\Project\JavaWeb\LS04\doc\img" />
+      <recent name="D:\Project\JavaWeb\LS04\doc" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\JavaWeb\LS04\web" />
+      <recent name="D:\Project\JavaWeb\LS04\web\homework" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.mama.ls04.user" />
+      <recent name="edu.mama.ls04" />
+      <recent name="edu.mama.ls04.homework" />
+      <recent name="edu.mama.ls04.bean" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.40">
+    <configuration name="CarServlet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.mama.ls04.homework.CarServlet" />
+      <module name="LS04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.mama.ls04.homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.40" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.40" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="LS04:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/LS04_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="ae4c4967-13c1-49d4-9301-b5b5f8cfd988" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55682" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="LS04:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CarServlet" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.40" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="551db9fd-f057-4621-8146-102bc0283423" name="Default Changelist" comment="" />
+      <created>1619197403463</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619197403463</updated>
+      <workItem from="1619197404877" duration="464000" />
+      <workItem from="1619446891423" duration="155000" />
+      <workItem from="1619502826783" duration="597000" />
+      <workItem from="1619503437076" duration="14829000" />
+      <workItem from="1619532554770" duration="8625000" />
+      <workItem from="1619594958622" duration="982000" />
+      <workItem from="1619596263771" duration="8156000" />
+      <workItem from="1619609364684" duration="610000" />
+      <workItem from="1619662830911" duration="5817000" />
+      <workItem from="1619779808978" duration="11437000" />
+      <workItem from="1619833943632" duration="62000" />
+      <workItem from="1620441170726" duration="20274000" />
+      <workItem from="1620560682338" duration="34570000" />
+      <workItem from="1620650811677" duration="775000" />
+      <workItem from="1620663152964" duration="26301000" />
+      <workItem from="1620786620169" duration="10337000" />
+      <workItem from="1620807765137" duration="4647000" />
+      <workItem from="1620872977724" duration="16369000" />
+      <workItem from="1621220568921" duration="8759000" />
+      <workItem from="1621231559720" duration="11353000" />
+      <workItem from="1621310564175" duration="2000" />
+      <workItem from="1621317815433" duration="36254000" />
+      <workItem from="1621431694140" duration="27000" />
+      <workItem from="1621437842993" duration="578000" />
+      <workItem from="1621474143118" duration="5717000" />
+    </task>
+    <task id="LOCAL-00001" summary="LS04">
+      <created>1619197851061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619197851061</updated>
+    </task>
+    <task id="LOCAL-00002" summary="LS04">
+      <created>1619502938809</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619502938809</updated>
+    </task>
+    <task id="LOCAL-00003" summary="LS04">
+      <created>1619507916872</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619507916872</updated>
+    </task>
+    <task id="LOCAL-00004" summary="LS04">
+      <created>1619536482497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619536482497</updated>
+    </task>
+    <task id="LOCAL-00005" summary="LS04">
+      <created>1619609064736</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619609064736</updated>
+    </task>
+    <task id="LOCAL-00006" summary="LS04">
+      <created>1619786874332</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619786874332</updated>
+    </task>
+    <task id="LOCAL-00007" summary="LS04">
+      <created>1619790684805</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619790684805</updated>
+    </task>
+    <task id="LOCAL-00008" summary="LS04">
+      <created>1619795118915</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619795118915</updated>
+    </task>
+    <task id="LOCAL-00009" summary="LS04">
+      <created>1620442042042</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620442042042</updated>
+    </task>
+    <task id="LOCAL-00010" summary="LS04">
+      <created>1620453486215</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620453486215</updated>
+    </task>
+    <task id="LOCAL-00011" summary="LS04">
+      <created>1620454754104</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620454754104</updated>
+    </task>
+    <task id="LOCAL-00012" summary="LS04">
+      <created>1620714632934</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620714632935</updated>
+    </task>
+    <task id="LOCAL-00013" summary="LS04">
+      <created>1620728468397</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620728468397</updated>
+    </task>
+    <task id="LOCAL-00014" summary="LS04">
+      <created>1620750289158</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1620750289158</updated>
+    </task>
+    <task id="LOCAL-00015" summary="LS04">
+      <created>1620759466370</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1620759466370</updated>
+    </task>
+    <task id="LOCAL-00016" summary="LS04">
+      <created>1620808178776</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620808178776</updated>
+    </task>
+    <task id="LOCAL-00017" summary="LS04">
+      <created>1620900964585</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1620900964585</updated>
+    </task>
+    <task id="LOCAL-00018" summary="LS04">
+      <created>1620901391278</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1620901391278</updated>
+    </task>
+    <task id="LOCAL-00019" summary="LS04">
+      <created>1621181983441</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1621181983441</updated>
+    </task>
+    <task id="LOCAL-00020" summary="LS04">
+      <created>1621183111542</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1621183111542</updated>
+    </task>
+    <task id="LOCAL-00021" summary="LS04">
+      <created>1621220618751</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1621220618751</updated>
+    </task>
+    <task id="LOCAL-00022" summary="LS04">
+      <created>1621221090168</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1621221090168</updated>
+    </task>
+    <task id="LOCAL-00023" summary="LS04">
+      <created>1621416251207</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621416251207</updated>
+    </task>
+    <task id="LOCAL-00024" summary="LS04~">
+      <created>1621425994249</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1621425994250</updated>
+    </task>
+    <task id="LOCAL-00025" summary="LS04~">
+      <created>1621438403472</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1621438403472</updated>
+    </task>
+    <task id="LOCAL-00026" summary="LS04~">
+      <created>1621438414617</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1621438414617</updated>
+    </task>
+    <task id="LOCAL-00027" summary="JSP">
+      <created>1621474856200</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621474856200</updated>
+    </task>
+    <task id="LOCAL-00028" summary="登录">
+      <created>1621476836986</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1621476836986</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="LS04" />
+    <MESSAGE value="LS04~" />
+    <MESSAGE value="JSP" />
+    <MESSAGE value="登录" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="context + &quot;/user/list&quot;" language="JAVA" />
+        <watch expression="request.getRequestDispatcher(context + &quot;/user/list&quot;)" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

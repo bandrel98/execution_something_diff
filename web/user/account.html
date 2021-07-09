@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .box-card {margin: 20px auto; width: 80%; }
+        [v-cloak] {display: none;}
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <el-card class="box-card">
+        <h2 style="display: inline-block">
+            你好，{{user.mobile || '匿名用户'}}
+        </h2>
+
+        <div style="display: inline-block; float: right; margin: 0.83em 0;">
+            <el-badge :value="12" class="item">
+                <el-button size="small">
+                    <i class="el-icon-bell"></i>
+                </el-button>
+            </el-badge>
+
+            <el-button size="small" style="margin-left: 40px">修改密码</el-button>
+<!--            <el-link size="small" href="../logout">退出登录</el-link>-->
+            <el-button size="small" @click="logout">退出登录</el-button>
+        </div>
+    </el-card>
+
+    <el-card class="box-card">
+        <div slot="header" class="clearfix">
+            <b>学习中心</b>
+        </div>
+        <el-table :data="tableData" stripe border>
+            <el-table-column type="index" width="50"></el-table-column>
+            <el-table-column prop="course" label="课程"></el-table-column>
+            <el-table-column prop="teacher" label="老师" width="180"></el-table-column>
+            <el-table-column prop="hour" label="学时" width="100"></el-table-column>
+            <el-table-column label="学习进度" width="200">
+                <template slot-scope="scope">
+                    <el-progress :text-inside="true" :stroke-width="26" :percentage="scope.row.study * 100 / scope.row.hour"></el-progress>
+                </template>
+            </el-table-column>
+            <el-table-column label="正在学习">
+                <template slot-scope="scope">
+                    <span v-if="scope.row.study < scope.row.hour">
+                        <i class="el-icon-video-camera"></i> {{scope.row.curr}}
+                        <el-link type="primary" size="small" @click="edit(scope.row)">继续学习</el-link>
+                    </span>
+                    <span v-else>
+                        <el-link type="primary" size="small" @click="edit(scope.row)">再次学习</el-link>
+                    </span>
+                </template>
+            </el-table-column>
+        </el-table>
+    </el-card>
+</div>
+
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            user: {},
+            tableData: []
+        },
+        methods: {
+            load: function () {
+                var vue = this;
+
+                //处理XHR请求和响应
+                fetch('../static/course.json')                  //发送请求
+                    .then(resp => resp.json())                  //接收响应数据，转成JSON
+                    .then(resp => {
+                        vue.tableData = resp;                   //按业务逻辑处理数据
+                    });
+            },
+            logout: function (row) {
+                //处理XHR请求和响应
+                fetch('../logout')                              //发送请求
+                    .then(resp => {
+                        window.location.href = 'login.html'
+                    });
+            },
+            account: function (row) {
+                var vue = this;
+
+                //Servlet映射多个URL
+                var url = "../user/account";
+
+                //处理XHR请求和响应
+                fetch(url)                                      //发送请求
+                    .then(resp => resp.json())                  //接收响应数据，转成JSON
+                    .then(resp => {
+                        vue.user = resp || {};
+                    });
+            }
+        },
+        mounted: function () {
+            this.load();
+            this.account();
+        }
+    })
+</script>
+</html>

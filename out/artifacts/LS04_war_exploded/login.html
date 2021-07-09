@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .box-card {margin: 100px auto; width: 300px; }
+        [v-cloak] {display: none;}
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <el-card class="box-card">
+        <div slot="header" class="clearfix">
+            <img src="static/logo.png" width="180" style="display: block; margin: auto;">
+        </div>
+        <el-form ref="form" :model="login">
+            <el-form-item>
+                <el-input prefix-icon="el-icon-mobile" v-model="login.mobile" placeholder="手机号"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-input prefix-icon="el-icon-lock" v-model="login.password" placeholder="密码" type="password"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" @click="submit" :disabled="!login.mobile || !login.password" style="width: 100%">登录</el-button>
+                <el-alert :title="form.errorMsg" type="error" v-if="form.errorMsg" :closable="false"></el-alert>
+            </el-form-item>
+            <el-form-item>
+                <div style="text-align: center">
+                    还没账号？<a href="register.html">立即注册</a>
+                </div>
+            </el-form-item>
+        </el-form>
+    </el-card>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            login: {
+            },
+            form: {
+                errorMsg: null
+            }
+        },
+        methods: {
+            submit: function (e) {
+                var vue = this;
+
+                //构造请求参数
+                var body = new URLSearchParams();
+                for (var prop in vue.login) {
+                    body.append(prop, vue.login[prop]);
+                }
+
+                var options = {
+                    method: 'POST',
+                    headers: {'content-type': 'application/x-www-form-urlencoded'},
+                    body: body
+                };
+
+                //处理XHR请求和响应
+                fetch('login', options)                                              //发送请求
+                    .then(response => response.json())                                  //接收响应数据，转成JSON
+                    .then(result => {
+
+                        //按业务逻辑处理数据
+                        if (result.success) {
+
+                            window.location.href = 'user/account.html';
+                        } else {
+                            vue.$message.error(result.msg);
+                        }
+                    });
+            }
+        }
+    });
+</script>
+</html>

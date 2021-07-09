@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .box-card {margin: 50px auto; width: 60%; }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-card class="box-card">
+        <div slot="header" class="clearfix">
+            <b>用户列表</b>
+        </div>
+        <el-table :data="tableData" stripe border>
+            <el-table-column prop="id" label="ID" width="80"></el-table-column>
+            <el-table-column prop="mobile" label="用户名" width="180"></el-table-column>
+            <el-table-column prop="date" label="注册日期" width="180"></el-table-column>
+            <el-table-column label="操作" width="100">
+                <template slot-scope="scope">
+                    <el-link type="primary" size="small" @click="edit(scope.row)">编辑</el-link>
+                    <el-link type="danger" size="small" @click="del(scope.row)">删除</el-link>
+                </template>
+            </el-table-column>
+        </el-table>
+    </el-card>
+
+    <el-dialog title="修改用户" :visible.sync="dialog.show" width="400px" :close-on-click-modal="false">
+
+        <el-input prefix-icon="el-icon-mobile" v-model="dialog.edit.mobile" placeholder="手机号"></el-input>
+
+        <span slot="footer" class="dialog-footer">
+            <el-button type="default" @click="dialog.show = false">取 消</el-button>
+            <el-button type="primary" @click="save">确 定</el-button>
+        </span>
+    </el-dialog>
+</div>
+
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            tableData: [],
+            dialog: {
+                show: false,
+                edit: {}
+            },
+        },
+        methods: {
+            load: function () {
+                var vue = this;
+
+                //使用文件作为数据源
+                // var url = "../static/user.json";
+
+                //使用Servlet作为数据源
+                // var url = "../json/list";
+
+                //使用数据库作为数据源
+                // var url = "../jdbc/list";
+
+                //Servlet映射多个URL
+                var url = "../user";
+
+                //处理XHR请求和响应
+                fetch(url)                                      //发送请求
+                    .then(resp => resp.json())                  //接收响应数据，转成JSON
+                    .then(resp => {
+                        vue.tableData = resp;                   //按业务逻辑处理数据
+                    });
+            },
+
+            edit: function (row) {
+                this.dialog.edit = JSON.parse(JSON.stringify(row));
+                this.dialog.show = true;
+            },
+            save: function () {
+                var vue = this;
+
+                var url = '../user?id=' + vue.dialog.edit.id + '&mobile=' + vue.dialog.edit.mobile;
+
+                //处理XHR请求和响应
+                fetch(url, {method: 'PUT'})                                             //发送请求
+                    .then(response => response.json())                                  //接收响应数据，转成JSON
+                    .then(json => {
+
+                        //按业务逻辑处理数据
+                        if (json) {
+                            vue.$message.success('修改成功');
+                            vue.dialog.show = false;
+                            vue.load();
+                        } else {
+                            vue.$message.error('出错了哦，请稍后重试');
+                        }
+                    });
+            },
+            del: function (row) {
+                var vue = this;
+
+                var url = '../user?id=' + row.id;
+
+                //处理XHR请求和响应
+                fetch(url, {method: 'DELETE'})                                          //发送请求
+                    .then(response => response.json())                                  //接收响应数据，转成JSON
+                    .then(json => {
+
+                        //按业务逻辑处理数据
+                        if (json) {
+                            vue.$message.success('删除成功');
+                            vue.load();
+                        } else {
+                            vue.$message.error('出错了哦，请稍后重试');
+                        }
+                    });
+
+                // this.tableData = this.tableData.filter(x => x.id !== row.id);
+            }
+        },
+        mounted: function () {
+            this.load();
+        }
+    })
+</script>
+</html>

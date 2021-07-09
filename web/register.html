@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .box-card {margin: 100px auto; width: 400px; }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-card class="box-card">
+        <div slot="header" class="clearfix">
+            <img src="static/logo.png" width="180" style="display: block; margin: auto;">
+        </div>
+        <el-form ref="form" :model="register">
+            <el-form-item>
+                <el-input prefix-icon="el-icon-mobile" v-model="register.mobile" placeholder="手机号"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-input prefix-icon="el-icon-lock" v-model="register.password" placeholder="密码" type="password"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-input prefix-icon="el-icon-lock" v-model="register.repeatPwd" placeholder="确认密码" type="password"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-checkbox v-model="register.agree">同意<a href="agreement.html">《注册协议》</a></el-checkbox>
+            </el-form-item>
+            <el-form-item>
+                <el-alert :title="form.errorMsg" type="error" v-if="form.errorMsg" :closable="false"></el-alert>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" @click="submit" :disabled="!register.agree">注册</el-button>
+            </el-form-item>
+        </el-form>
+    </el-card>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            register: {
+            },
+            form: {
+                errorMsg: null
+            }
+        },
+        methods: {
+            submit: function (e) {
+                var vue = this;
+                vue.form.errorMsg = vue.verify();
+
+                if (!vue.form.errorMsg) {
+
+                    //使用数据库存储数据
+                    // var url = '../jdbc/register';
+
+                    //Servlet映射多个URL
+                    var url = 'user';
+
+                    //构造请求参数
+                    var body = new URLSearchParams();
+                    for (var prop in vue.register) {
+                        body.append(prop, vue.register[prop]);
+                    }
+
+                    var options = {
+                        method: 'POST',
+                        headers: {'content-type': 'application/x-www-form-urlencoded'},
+                        body: body
+                    };
+
+                    //处理XHR请求和响应
+                    fetch(url, options)                                                     //发送请求
+                        .then(response => response.json())                                  //接收响应数据，转成JSON
+                        .then(json => {
+                            vue.$message.success('注册成功');                               //按业务逻辑处理数据
+                        });
+                }
+            },
+            verify: function () {
+                if (!this.register.mobile || !this.register.password) {
+                    return '手机号和密码必须填写';
+                }
+
+                if (this.register.password != this.register.repeatPwd) {
+                    return'两次输入的密码不一致';
+                }
+
+                return null;
+            }
+        }
+    });
+</script>
+</html>
